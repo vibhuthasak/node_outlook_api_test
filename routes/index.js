@@ -3,10 +3,10 @@ var router = express.Router();
 var authHelper = require('../helpers/auth');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
     let parms = { title: 'Home', active: { home: true } };
 
-    const accessToken = req.cookies.graph_access_token;
+    const accessToken = await authHelper.getAccessToken(req.cookies, res);
     const userName = req.cookies.graph_user_name;
 
     if (accessToken && userName) {
