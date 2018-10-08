@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f719c3e4-9767-49f6-a95b-14eb13b3c76a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/mail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/mail.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/mail.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/mail.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,15 +48,15 @@
         <counts>
           <entry key="env" value="5" />
           <entry key="gitignore" value="2" />
-          <entry key="js" value="2551" />
-          <entry key="txt" value="126" />
+          <entry key="js" value="2555" />
+          <entry key="txt" value="160" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="1" />
-          <entry key="JavaScript" value="2551" />
-          <entry key="PLAIN_TEXT" value="132" />
+          <entry key="JavaScript" value="2555" />
+          <entry key="PLAIN_TEXT" value="166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -99,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/mail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="485">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
@@ -266,7 +262,7 @@
       <workItem from="1538808701614" duration="12616000" />
       <workItem from="1538969482610" duration="1489000" />
       <workItem from="1538971192040" duration="5104000" />
-      <workItem from="1538979055272" duration="1529000" />
+      <workItem from="1538979055272" duration="1783000" />
     </task>
     <task id="LOCAL-00001" summary="Add env file to gitrepo">
       <created>1538969822295</created>
@@ -296,11 +292,25 @@
       <option name="project" value="LOCAL" />
       <updated>1538979837015</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mail API added">
+      <created>1538980619204</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1538980619204</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Mail router modified">
+      <created>1538980781890</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1538980781890</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21518000" />
+    <option name="totallyTimeSpent" value="21772000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,7 +325,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67676765" visible="true" weight="0.2118003" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.67676765" visible="true" weight="0.2118003" />
       <window_info id="Structure" order="1" sideWeight="0.50507617" side_tool="true" weight="0.19793323" />
       <window_info id="npm" order="2" sideWeight="0.32241812" side_tool="true" weight="0.2118003" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -327,7 +337,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32838285" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32704404" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.2920792" />
       <window_info anchor="bottom" id="File Transfer" order="11" weight="0.19966997" />
@@ -375,7 +385,9 @@
     <MESSAGE value="JWT added and Cookies" />
     <MESSAGE value="getTokenFromCode bug fixed. &quot;Cookies not set&quot;" />
     <MESSAGE value="Refresh Token added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refresh Token added" />
+    <MESSAGE value="Mail API added" />
+    <MESSAGE value="Mail router modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mail router modified" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -453,8 +465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/mail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        <state relative-caret-position="485">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
