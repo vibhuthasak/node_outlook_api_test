@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var authHelper = require('../helpers/auth');
 var graph = require('@microsoft/microsoft-graph-client');
+var fs = require('fs');
 
 router.get('/', async function(req, res, next) {
     let parms = { title: 'Inbox', active: { inbox: true } };
@@ -25,8 +26,8 @@ router.get('/', async function(req, res, next) {
                 .api('/me/mailfolders/inbox/messages')
                 .top(10)
                 .select('subject,from,receivedDateTime,isRead')
-                .filter("startswith(subject, 'FW')")
                 .orderby('receivedDateTime DESC')
+                .filter("startswith(subject, 'FW:')")
                 .get();
 
             parms.messages = result.value;
