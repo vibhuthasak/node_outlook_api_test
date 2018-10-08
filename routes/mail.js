@@ -25,6 +25,7 @@ router.get('/', async function(req, res, next) {
                 .api('/me/mailfolders/inbox/messages')
                 .top(10)
                 .select('subject,from,receivedDateTime,isRead')
+                .filter("startswith(subject, 'FW')")
                 .orderby('receivedDateTime DESC')
                 .get();
 
