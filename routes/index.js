@@ -6,8 +6,17 @@ var authHelper = require('../helpers/auth');
 router.get('/', function(req, res, next) {
     let parms = { title: 'Home', active: { home: true } };
 
-    parms.signInUrl = authHelper.getAuthUrl();
-    parms.debug = parms.signInUrl;
+    const accessToken = req.cookies.graph_access_token;
+    const userName = req.cookies.graph_user_name;
+
+    if (accessToken && userName) {
+        parms.user = userName;
+        parms.debug = `User: ${userName}\nAccess Token: ${accessToken}`;
+    } else {
+        parms.signInUrl = authHelper.getAuthUrl();
+        parms.debug = parms.signInUrl;
+    }
+
     res.render('index', parms);
 });
 

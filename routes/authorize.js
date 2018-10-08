@@ -15,7 +15,9 @@ router.get('/', async function(req, res, next) {
         } catch (error) {
             res.render('error', { title: 'Error', message: 'Error exchanging code for token', error: error });
         }
-        res.render('index', { title: 'Home', debug: `Access Token: ${token}` });
+
+        res.redirect('/');
+        // res.render('index', { title: 'Home', debug: `Access Token: ${token}` });
     } else {
         // Otherwise complain
         res.render('error', { title: 'Error', message: 'Authorization error', error: { status: 'Missing code parameter' } });

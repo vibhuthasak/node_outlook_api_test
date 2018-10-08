@@ -1,3 +1,5 @@
+const  jwt = require('jsonwebtoken');
+
 const credentials = {
     client: {
         id: process.env.APP_ID,
@@ -20,7 +22,7 @@ function getAuthUrl() {
     return returnVal;
 }
 
-async function getTokenFromCode(auth_code) {
+async function getTokenFromCode(auth_code, res) {
     console.log('auth code: ', auth_code);
     // var token;
     // try {
@@ -40,9 +42,24 @@ async function getTokenFromCode(auth_code) {
     });
 
     const token = oauth2.accessToken.create(result);
-    console.log("HERE");
-    console.log('Token Created', token);
+    console.log('Token Created', token.token);
+
+    saveValuesToCookie(token, res);
     return token.token.access_token;
+}
+
+//Function saveToCookie <-- Token, Response
+
+function saveValuesToCookie(token, res) {
+
+    // Parse Identity Token
+    const user = jwt.decode(token.token.id_token);
+
+    // Save the access token in a cookie
+    res.cookie('graph_access_token', token.token.access_token, {maxAge: 3600000, httpOnly: true});
+
+    // Save the user's name in a cookie
+    res.cookie('graph_user_name', user.name, {maxAge: 360000, httpOnly: true});
 }
 
 exports.getTokenFromCode = getTokenFromCode;
