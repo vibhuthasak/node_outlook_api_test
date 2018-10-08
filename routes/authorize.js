@@ -11,7 +11,7 @@ router.get('/', async function(req, res, next) {
     if (code) {
         let token;
         try {
-            token = await authHelper.getTokenFromCode(code)
+            token = await authHelper.getTokenFromCode(code, res)
         } catch (error) {
             res.render('error', { title: 'Error', message: 'Error exchanging code for token', error: error });
         }
