@@ -10,11 +10,14 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^6.0.0",
+    "export-to-csv": "^0.1.2",
     "express": "~4.16.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
+    "json2csv": "^4.2.1",
     "jsonwebtoken": "^8.3.0",
     "morgan": "~1.9.0",
+    "parse5": "^5.1.0",
     "simple-oauth2": "^2.2.1"
   }
 }

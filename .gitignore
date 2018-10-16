@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+emails.json
+log.txt
+outcsv.csv
+outcsv2.csv
+outcsv3.csv
